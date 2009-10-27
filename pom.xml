@@ -10,6 +10,6 @@
   <parent>
     <artifactId>cosmocode-parent</artifactId>
     <groupId>de.cosmocode</groupId>
-    <version>1.0</version>
+    <version>1.2</version>
   </parent>
 </project>
