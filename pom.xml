@@ -1,49 +1,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.cosmocode</groupId>
-  <artifactId>eclipse-config</artifactId>
-  <packaging>jar</packaging>
-  <version>1.2-SNAPSHOT</version>
-  <name>CosmoCode Eclipse Configs</name>
-  <url>http://www.cosmocode.de</url>
-  <distributionManagement>
-    <repository>
-      <id>cosmocode-public-releases</id>
-      <name>CosmoCode public releases</name>
-      <url>scp://mvn.cosmocode.de:6589/var/www/mvn/</url>
-    </repository>
-    <snapshotRepository>
-      <id>cosmocode-private-snapshots</id>
-      <name>CosmoCode private snapshots</name>
-      <url>http://mvn.cosmo/repository/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
-  <profiles>
-    <profile>
-      <id>cosmocode-public-snapshots</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>cosmocode-public-snapshots</id>
-          <name>CosmoCode public snapshots</name>
-          <url>scp://mvn.cosmocode.de:6589/var/www/mvn/</url>
-        </snapshotRepository>
-      </distributionManagement>
-    </profile>
-    <profile>
-      <id>cosmocode-private-releases</id>
-      <distributionManagement>
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>CosmoCode Eclipse Configs</name>
+
+    <groupId>de.cosmocode</groupId>
+    <artifactId>eclipse-config</artifactId>
+    <version>1.2-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <scm>
+        <developerConnection>scm:svn:https://commons.svn.cosmocode.de/eclipse-config/trunk</developerConnection>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <distributionManagement>
         <repository>
-          <id>cosmocode-private-releases</id>
-          <name>CosmoCode private releases</name>
-          <url>http://mvn.cosmo/repository/internal</url>
+            <id>cosmocode-public-releases</id>
+            <name>CosmoCode public releases</name>
+            <url>scp://mvn.cosmocode.de:6589/var/www/mvn/</url>
         </repository>
-      </distributionManagement>
-    </profile>
-  </profiles>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <scm>
-    <developerConnection>scm:svn:https://commons.svn.cosmocode.de/eclipse-config/trunk</developerConnection>
-  </scm>
+        <snapshotRepository>
+            <id>cosmocode-private-snapshots</id>
+            <name>CosmoCode private snapshots</name>
+            <url>http://mvn.cosmo/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>cosmocode-public-snapshots</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>cosmocode-public-snapshots</id>
+                    <name>CosmoCode public snapshots</name>
+                    <url>scp://mvn.cosmocode.de:6589/var/www/mvn/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>cosmocode-private-releases</id>
+            <distributionManagement>
+                <repository>
+                    <id>cosmocode-private-releases</id>
+                    <name>CosmoCode private releases</name>
+                    <url>http://mvn.cosmo/repository/internal</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>
